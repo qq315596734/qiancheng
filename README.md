@@ -1,0 +1,2 @@
+# JPushSDK
+VCS for bintray
