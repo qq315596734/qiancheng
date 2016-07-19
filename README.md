@@ -4,7 +4,7 @@
 
 该模块主要使用来执行脚本, 将push库文件同步到jcenter上.
 
-##### 同步到jcenter
+### 同步到jcenter
 
 1. 将jenkins 上build的jar, so等copy 到相应目录
 
@@ -17,7 +17,7 @@
 执行成功即上传到了bintray服务器.然后进行相关的同步就好
 
 
-##### 集成方式
+### 集成方式
 
 1. 在外围的gradle中配置 jcenter库(AS默认就是,不用管)
 
@@ -59,10 +59,13 @@ ps: 需要将自定义的Recevier添加到AndroidManifest.xml,配置如下:
     </receiver>
 
 
-##### 富媒体相关
+### 富媒体相关
 
 可以在项目中覆盖原有的资源文件: 创建同名的布局文件以及相应的图片资源即可.
 
+### more
+
+手动集成方式参见官方文档
 
 
 
