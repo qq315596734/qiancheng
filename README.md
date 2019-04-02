@@ -1,4 +1,4 @@
-# qiancheng
+# qnjsdk
 模块说明
 该模块主要使用来执行脚本, 将push库文件同步到jcenter上.
 
