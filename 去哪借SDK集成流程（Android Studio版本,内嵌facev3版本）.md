@@ -20,14 +20,20 @@ allprojects {
 在项目的build.gradle文件中添加：
 
 ```java
-
+android {
+    defaultConfig {
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+}
 //如果您的项目中没有使用过魔蝎sdk和face++ sdk 
 dependencies {
   // gradle >= 3.0
-  implementation 'com.qckj.qnjsdk:qnjsdk-v3:0.0.3'
+  implementation 'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'
 
   // gradle < 3.0
-  compile 'com.qckj.qnjsdk:qnjsdk-v3:0.0.3'
+  compile 'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'
 }
 ```
 
@@ -127,7 +133,7 @@ QNJSdk.start(MainActivity.this, phone, uuid, new QnjsdkCallback() {
 //如果您的项目中使用过魔蝎sdk或face++ sdk 
 dependencies {
   // gradle >= 3.0
-    implementation （'com.qckj.qnjsdk:qnjsdk-v3:0.0.3'）{
+    implementation （'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'）{
     	//解决support包冲突
     	exclude group: "com.android.support"
         //如果您的项目中已经具有face++ sdk 添加
@@ -137,7 +143,7 @@ dependencies {
     }
 
   // gradle < 3.0
-    compile （'com.qckj.qnjsdk:qnjsdk-v3:0.0.3'）{
+    compile （'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'）{
        	//解决support包冲突
     	exclude group: "com.android.support"
         //如果您的项目中已经具有face++ sdk 添加
