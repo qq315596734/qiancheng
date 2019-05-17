@@ -1,5 +1,13 @@
 # 去哪借SDK集成流程（Android Studio版本）
 
+
+
+## 接入前须知：
+
+#### 如果您应用的包名（bundleID）没有绑定face++，则需要进行绑定。可自行申请认证face商户相关资质进行绑定，也可以联系我司产品绑定 （平台--公司--产品--bundleID：手机平台--公司名称--产品名称--您的包名）。
+
+
+
 ## 开始集成
 
 ### 1.导入sdk
@@ -30,10 +38,10 @@ android {
 //如果您的项目中没有使用过魔蝎sdk和face++ sdk 
 dependencies {
   // gradle >= 3.0
-  implementation 'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'
+  implementation 'com.qckj.qnjsdk:qnjsdk-v3:1.0.1'
 
   // gradle < 3.0
-  compile 'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'
+  compile 'com.qckj.qnjsdk:qnjsdk-v3:1.0.1'
 }
 ```
 
@@ -97,7 +105,7 @@ android {
 /*
  Context context           上下文
  String phone              用户手机号
- String uid                用户uid
+ String uid                用户uid 该用户在app的唯一标识（很重要，切勿传错）
  QnjsdkCallback callback   sdk启动成功失败的回调
 */
 QNJSdk.start(MainActivity.this, phone, uuid, new QnjsdkCallback() {
@@ -133,7 +141,7 @@ QNJSdk.start(MainActivity.this, phone, uuid, new QnjsdkCallback() {
 //如果您的项目中使用过魔蝎sdk或face++ sdk 
 dependencies {
   // gradle >= 3.0
-    implementation （'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'）{
+    implementation （'com.qckj.qnjsdk:qnjsdk-v3:1.0.1'）{
     	//解决support包冲突
     	exclude group: "com.android.support"
         //如果您的项目中已经具有face++ sdk 添加
@@ -143,7 +151,7 @@ dependencies {
     }
 
   // gradle < 3.0
-    compile （'com.qckj.qnjsdk:qnjsdk-v3:1.0.0'）{
+    compile （'com.qckj.qnjsdk:qnjsdk-v3:1.0.1'）{
        	//解决support包冲突
     	exclude group: "com.android.support"
         //如果您的项目中已经具有face++ sdk 添加
